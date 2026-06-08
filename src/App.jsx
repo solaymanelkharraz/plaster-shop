@@ -15,7 +15,7 @@ const Navbar = () => {
       <nav className="fixed w-full z-50 top-0 border-b border-stone-200/40 bg-[#F4F2EE]/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
           <Link to="/" className="text-xl font-light tracking-[0.25em] text-stone-800 font-serif z-50">
-            L'AURA <span className="text-stone-400 italic font-light">CANDLES</span>
+            ALMA <span className="text-stone-400 italic font-light">CANDLES</span>
           </Link>
           
           {/* Desktop Links */}
