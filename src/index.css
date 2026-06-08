@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-warm-beige: #F4F2EE;
+  --color-cream: #FAF9F6;
+  --color-sage: #8A9A86;
+}
+
 body {
-  @apply bg-[#F9F9F7] text-gray-800 font-sans antialiased; 
+  @apply bg-warm-beige text-stone-800 font-sans antialiased; 
+}
+
+/* Custom styles for high-end boutique look */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
 }

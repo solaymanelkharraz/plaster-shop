@@ -12,25 +12,25 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full z-50 top-0 border-b border-white/40 bg-white/40 backdrop-blur-md">
+      <nav className="fixed w-full z-50 top-0 border-b border-stone-200/40 bg-[#F4F2EE]/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-          <Link to="/" className="text-2xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600 z-50">
-            STUDIO<span className="text-slate-800">PLASTER</span>
+          <Link to="/" className="text-xl font-light tracking-[0.25em] text-stone-800 font-serif z-50">
+            L'AURA <span className="text-stone-400 italic font-light">CANDLES</span>
           </Link>
           
           {/* Desktop Links */}
-          <div className="hidden md:flex gap-8 font-medium text-sm items-center">
-            <Link to="/" className="text-slate-600 hover:text-violet-600 transition-colors">Home</Link>
-            <Link to="/collection" className="text-slate-600 hover:text-violet-600 transition-colors">Collection</Link>
-            <Link to="/admin" className="text-slate-400 hover:text-indigo-600 transition-colors bg-white/50 px-4 py-2 rounded-full border border-white shadow-sm">Admin Panel</Link>
+          <div className="hidden md:flex gap-8 font-light text-xs tracking-widest uppercase items-center">
+            <Link to="/" className="text-stone-600 hover:text-stone-900 transition-colors">Home</Link>
+            <Link to="/collection" className="text-stone-600 hover:text-stone-900 transition-colors">Collection</Link>
+            <Link to="/admin" className="text-stone-400 hover:text-stone-800 transition-colors bg-white/40 px-4 py-2 rounded-full border border-stone-200/60 shadow-sm">Admin</Link>
           </div>
 
           {/* Mobile Hamburger Button */}
           <button 
             onClick={() => setIsOpen(!isOpen)} 
-            className="md:hidden text-slate-800 z-50 p-2 bg-white/50 rounded-full border border-white shadow-sm"
+            className="md:hidden text-stone-800 z-50 p-2 bg-white/40 rounded-full border border-stone-200/60 shadow-sm"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </nav>
@@ -42,11 +42,11 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-slate-50/95 backdrop-blur-xl pt-28 px-6 flex flex-col gap-6 md:hidden"
+            className="fixed inset-0 z-40 bg-[#F4F2EE]/98 backdrop-blur-xl pt-28 px-6 flex flex-col gap-6 md:hidden font-serif"
           >
-            <Link onClick={() => setIsOpen(false)} to="/" className="text-3xl font-black text-slate-800 border-b border-slate-200 pb-4">Home</Link>
-            <Link onClick={() => setIsOpen(false)} to="/collection" className="text-3xl font-black text-slate-800 border-b border-slate-200 pb-4">Collection</Link>
-            <Link onClick={() => setIsOpen(false)} to="/admin" className="text-3xl font-black text-violet-600 mt-auto mb-12">Admin Access &rarr;</Link>
+            <Link onClick={() => setIsOpen(false)} to="/" className="text-3xl font-light text-stone-800 border-b border-stone-200/40 pb-4 tracking-wide">Home</Link>
+            <Link onClick={() => setIsOpen(false)} to="/collection" className="text-3xl font-light text-stone-800 border-b border-stone-200/40 pb-4 tracking-wide">Collection</Link>
+            <Link onClick={() => setIsOpen(false)} to="/admin" className="text-2xl font-light italic text-stone-500 mt-auto mb-12">Admin Portal &rarr;</Link>
           </motion.div>
         )}
       </AnimatePresence>
@@ -58,13 +58,7 @@ const Navbar = () => {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-hidden relative selection:bg-violet-300">
-        
-        {/* Background Glowing Blobs (Optimized for Mobile) */}
-        <div className="fixed top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-purple-300 rounded-full mix-blend-multiply filter blur-[100px] md:blur-[120px] opacity-60 animate-[spin_20s_linear_infinite] -z-10"></div>
-        <div className="fixed top-[20%] right-[-10%] w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-rose-300 rounded-full mix-blend-multiply filter blur-[100px] md:blur-[120px] opacity-60 animate-[pulse_8s_ease-in-out_infinite] -z-10"></div>
-        <div className="fixed bottom-[-10%] left-[20%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-indigo-300 rounded-full mix-blend-multiply filter blur-[100px] md:blur-[120px] opacity-60 -z-10"></div>
-
+      <div className="min-h-screen bg-warm-beige font-sans text-stone-800 overflow-x-hidden relative selection:bg-stone-200/60">
         <Navbar />
 
         {/* Page Content */}
